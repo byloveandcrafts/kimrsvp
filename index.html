@@ -548,6 +548,30 @@
     @keyframes fadeUp { from{opacity:0;transform:translateY(16px);}to{opacity:1;transform:translateY(0);} }
     .fade-in   { animation:fadeUp 0.7s ease both; }
     .fade-in-2 { animation:fadeUp 0.7s 0.15s ease both; }
+
+    /* ── Guest Type Dropdown ── */
+    .guest-type-select {
+      font-family:'Jost', sans-serif;
+      font-size:11px; letter-spacing:1px; text-transform:uppercase;
+      color:var(--forest);
+      background:rgba(250,247,241,0.95);
+      border:1.5px solid rgba(184,149,90,0.4);
+      border-radius:2px;
+      padding:5px 10px; margin-top:6px;
+      cursor:pointer; outline:none;
+      transition:border-color 0.2s, box-shadow 0.2s;
+      appearance:none; -webkit-appearance:none;
+      background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6'%3E%3Cpath d='M0 0l5 6 5-6z' fill='%23b8955a'/%3E%3C/svg%3E");
+      background-repeat:no-repeat; background-position:right 8px center;
+      padding-right:28px;
+    }
+    .guest-type-select:focus { border-color:var(--gold); box-shadow:0 0 0 3px rgba(184,149,90,0.12); }
+    .guest-type-badge {
+      display:inline-block; margin-top:5px;
+      font-size:9px; letter-spacing:1.5px; text-transform:uppercase;
+      color:var(--sage); border:1px solid rgba(122,158,142,0.35);
+      border-radius:2px; padding:2px 7px;
+    }
   </style>
 </head>
 <body>
@@ -771,17 +795,19 @@
     { label:"Mark Anthony's Side", key:"Fernandez Family", names:["Fe Fernandez","Oswaldo Fernandez","Samantha Fernandez"], maxGuests:3 },
     { label:"Mark Anthony's Side", key:"Louie and Shirley Allindogan", names:["Louie Allindogan","Shirley Allindogan","Carlo Alindogan","Guest of Carlo Alindogan"], maxGuests:4 },
     { label:"Mark Anthony's Side", key:"Batuigas Family", names:["Eva Batuigas","Ramon Batuigas","Kathleen Batuigas","Cathy Mombay","Estong Batuigas"], maxGuests:5 },
-    { label:"Mark Anthony's Side", key:"Debil Family", names:["Josephine Debil","Dante Debil","Leslie Debil","Jenielyn Debil","Ping Debil"], maxGuests:5 },
+    { label:"Mark Anthony's Side", key:"Debil Family", names:["Josephine Debil","Dante Debil","Leslie Debil","Jenielyn Debil","Ping Debil","Kiara Zabrina Debil"], maxGuests:6, kids:["Kiara Zabrina Debil"] },
     { label:"Mark Anthony's Side", key:"Che Che Israel", names:["Che Che Israel"], maxGuests:1 },
-    { label:"Mark Anthony's Side", key:"Karen Valencia", names:["Karen Valencia"], maxGuests:1 },
+    { label:"Mark Anthony's Side", key:"Karen Valencia", names:["Karen Valencia","Elfins Martina Valencia","Hezekiah Valencia","Patrice Valencia"], maxGuests:4, kids:["Elfins Martina Valencia","Hezekiah Valencia","Patrice Valencia"] },
     { label:"Mark Anthony's Side", key:"Verbo Gasapo", names:["Verbo Gasapo"], maxGuests:1 },
-    { label:"Mark Anthony's Side", key:"Buboy Israel", names:["Buboy Israel"], maxGuests:1 },
+    { label:"Mark Anthony's Side", key:"Buboy Israel", names:["Buboy Israel","Zia Denise Pasibe"], maxGuests:2, kids:["Zia Denise Pasibe"] },
     { label:"Mark Anthony's Side", key:"Gemma Israel", names:["Gemma Israel"], maxGuests:1 },
     { label:"Mark Anthony's Side", key:"Lorena Arevalo", names:["Lorena Arevalo"], maxGuests:1 },
+    { label:"Mark Anthony's Side", key:"PJ Arevalo", names:["PJ Arevalo"], maxGuests:1 },
+    { label:"Mark Anthony's Side", key:"Margaret Arevalo", names:["Margaret Arevalo"], maxGuests:1 },
     { label:"Mark Anthony's Side", key:"Luningning Gubat", names:["Luningning Gubat"], maxGuests:1 },
     { label:"Mark Anthony's Side", key:"Loyda Baay", names:["Loyda Baay"], maxGuests:1 },
     { label:"Mark Anthony's Side", key:"Angie Gubat", names:["Angie Gubat"], maxGuests:1 },
-    { label:"Mark Anthony's Side", key:"Ronald Gubat", names:["Ronald Gubat"], maxGuests:1 },
+    { label:"Mark Anthony's Side", key:"Ronald Gubat", names:["Ronald Gubat","Guest of Ronald Gubat"], maxGuests:2 },
     { label:"Mark Anthony's Side", key:"Brian and Matet Delfino", names:["Brian Delfino","Matet Delfino"], maxGuests:2 },
     { label:"Mark Anthony's Side", key:"Nina Valte-Lunaria", names:["Nina Valte-Lunaria","Guest of Nina Valte-Lunaria"], maxGuests:2 },
 
@@ -801,14 +827,13 @@
     { label:"Kimberly's Side", key:"Robert & Tess Alindayu", names:["Robert Alindayu","Tess Alindayu"], maxGuests:2 },
 
     // ── Friends ──
-    { label:"Friends", key:"Gabriel Family", names:["Abigail Gabriel","Chico Gabriel"], maxGuests:2 },
-    { label:"Friends", key:"Danielle Louise Lozada", names:["Danielle Louise Lozada"], maxGuests:1 },
-    { label:"Friends", key:"Ma Lourdes Viterbo", names:["Ma Lourdes Viterbo"], maxGuests:1 },
+    { label:"Friends", key:"Gabriel Family", names:["Abigail Gabriel","Chico Gabriel","Danielle Louise Lozada"], maxGuests:3 },
+    { label:"Friends", key:"Ma Lourdes Viterbo", names:["Ma Lourdes Viterbo","Guest of Ma Lourdes Viterbo"], maxGuests:2 },
     { label:"Friends", key:"Wills Nkwain Ngamfon", names:["Wills Nkwain Ngamfon"], maxGuests:1 },
     { label:"Friends", key:"John Idds Bellido", names:["John Idds Bellido"], maxGuests:1 },
     { label:"Friends", key:"Benjo Eslobo", names:["Benjo Eslobo","Guest of Benjo Eslobo"], maxGuests:2 },
     { label:"Friends", key:"Jolan Valenzuela", names:["Jolan Valenzuela"], maxGuests:1 },
-    { label:"Friends", key:"Macydane Callao", names:["Macydane Callao"], maxGuests:1 },
+    { label:"Friends", key:"Macydane Callao", names:["Macydane Callao","Guest of Macydane Callao"], maxGuests:2 },
     { label:"Friends", key:"Jerome & Winnie Espiritu", names:["Jerome Espiritu","Winnie Espiritu"], maxGuests:2 },
     { label:"Friends", key:"Lowie and Dhang De Guzman", names:["Lowie De Guzman","Imelda De Guzman"], maxGuests:2 },
     { label:"Friends", key:"Anthenis & Jhoy Rint", names:["Anthenis Rint","Juliet Rint"], maxGuests:2 },
@@ -830,7 +855,7 @@
     { label:"Friends", key:"Lerma Pasco", names:["Lerma Pasco"], maxGuests:1 },
     { label:"Friends", key:"Loi Fetalvero", names:["Loi Fetalvero"], maxGuests:1 },
     { label:"Friends", key:"Crystl Bautista", names:["Crystl Bautista"], maxGuests:1 },
-    { label:"Friends", key:"Dr. Juan Bardelosa", names:["Dr. Juan Bardelosa"], maxGuests:1 },
+    { label:"Friends", key:"Dr. Juan Bardelosa", names:["Dr. Juan Bardelosa","Guest of Dr. Juan Bardelosa"], maxGuests:2 },
     { label:"Friends", key:"Dr. Renato Vergara", names:["Dr. Renato Vergara"], maxGuests:1 },
     { label:"Friends", key:"Tet & Ayie Mallari", names:["Tet Mallari","Ayie"], maxGuests:2 },
     { label:"Friends", key:"Mike & Katherine Ng", names:["Mike Ng","Katherine Ng"], maxGuests:2 },
@@ -878,7 +903,8 @@
     resultsList.innerHTML = '';
     if(q.length < 2) return;
     document.getElementById('search-loading').classList.add('show');
-    setTimeout(()=>{
+    clearTimeout(searchInput._debounce);
+    searchInput._debounce = setTimeout(()=>{
       document.getElementById('search-loading').classList.remove('show');
       const hits = GUEST_GROUPS.filter(g =>
         g.key.toLowerCase().includes(q) ||
@@ -898,11 +924,11 @@
           const nameDisplay=g.key;
           const highlighted=nameDisplay.replace(new RegExp(`(${q.replace(/[.*+?^${}()|[\]\\]/g,'\\$&')})`, 'gi'), '<mark>$1</mark>');
           const initials=g.key.split(/[\s,&]+/).filter(Boolean).map(w=>w[0]).slice(0,2).join('').toUpperCase();
-          const memberCount=g.names.length;
+          const realCount=g.names.filter(n=>!(/^guest of\s/i.test(n||''))).length;
           li.innerHTML=`
             <div class="result-avatar">${initials}</div>
             <div class="result-name-text">${highlighted}</div>
-            ${memberCount>1?`<span class="result-group-badge">Party of ${memberCount}</span>`:''}
+            ${realCount>1?`<span class="result-group-badge">Party of ${realCount}</span>`:''}
           `;
           li.addEventListener('click',()=>handleGroupSelect(g));
           li.addEventListener('keydown',e=>{ if(e.key==='Enter'||e.key===' ') handleGroupSelect(g); });
@@ -926,7 +952,11 @@
     const blocked = await checkAlreadySubmitted(group);
     if(blocked) return;
 
-    groupMemberStates = group.names.map(n=>({ name:n, resolvedName:isPlaceholder(n)?'':n, choice:null }));
+    groupMemberStates = group.names.map(n=>{
+      const isKid = group.kids && group.kids.includes(n);
+      const isPlusOne = /^guest of\s/i.test(n||'');
+      return { name:n, resolvedName:isPlaceholder(n)?'':n, choice:null, guestType: isKid ? 'kid' : 'adult', isPlusOne };
+    });
 
     const wrap = document.getElementById('member-cards-wrap');
     wrap.innerHTML='';
@@ -944,12 +974,18 @@
       const displayName=member.resolvedName||member.name;
       const initials=(displayName||'?').split(/[\s,]+/).filter(Boolean).map(w=>w[0]).slice(0,2).join('').toUpperCase()||'?';
       const placeholderLabel = isPlusOne ? `+1 guest of ${member.name.replace(/^guest of\s*/i,'')}…` : 'Enter guest name…';
+      const showTypeDropdown = isPlusOne || needsName; // show dropdown for unnamed/plus-one slots
+      const typeDropdown = showTypeDropdown ? `
+        <select class="guest-type-select" id="mtype-select-${idx}" onchange="updateMemberType(${idx},this.value)">
+          <option value="adult" ${member.guestType==='adult'?'selected':''}>👤 Adult</option>
+          <option value="kid"   ${member.guestType==='kid'  ?'selected':''}>🧒 Child</option>
+        </select>` : `<span class="guest-type-badge">${member.guestType==='kid'?'🧒 Child':'👤 Adult'}</span>`;
       row.innerHTML=`
         <div class="member-avatar" id="mavatar-${idx}">${needsName&&!member.resolvedName?'+1':initials}</div>
         <div class="member-name-wrap">
           ${needsName
-            ? `<div style="font-size:10px;letter-spacing:1.5px;text-transform:uppercase;color:var(--gold);margin-bottom:3px;">${isPlusOne?'Plus One':''}</div><input class="member-name-input" id="mname-input-${idx}" type="text" placeholder="${placeholderLabel}" value="${member.resolvedName}" oninput="updateMemberName(${idx},this.value)">`
-            : `<div class="member-name">${displayName}</div>`}
+            ? `<div style="font-size:10px;letter-spacing:1.5px;text-transform:uppercase;color:var(--gold);margin-bottom:3px;">${isPlusOne?'Plus One':''}</div><input class="member-name-input" id="mname-input-${idx}" type="text" placeholder="${placeholderLabel}" value="${member.resolvedName}" oninput="updateMemberName(${idx},this.value)">${typeDropdown}`
+            : `<div class="member-name">${displayName}</div>${typeDropdown}`}
         </div>
         <div class="member-toggle">
           <button class="member-btn ${member.choice==='yes'?'go':''}" id="mbtn-yes-${idx}" onclick="setMemberChoice(${idx},'yes')" title="Attending">✓</button>
@@ -970,6 +1006,10 @@
     const av=document.getElementById(`mavatar-${idx}`);
     if(av) av.textContent=initials||'?';
     updateGroupProceedBtn();
+  }
+
+  function updateMemberType(idx, val){
+    groupMemberStates[idx].guestType = val;
   }
 
   let groupSelectedDietary=new Set();
@@ -1006,6 +1046,7 @@
     const declining=groupMemberStates.filter(m=>m.choice==='no');
     const guestNames=groupMemberStates.map(m=>m.resolvedName||m.name).join(', ');
     const attendingNames=attending.map(m=>m.resolvedName||m.name).join(', ');
+    const attendingTypes=attending.map(m=>`${m.resolvedName||m.name}(${m.guestType==='kid'?'Child':'Adult'})`).join(', ');
     const dietary=attending.length>0?getGroupDietaryNotes():'';
     const msg=attending.length>0?document.getElementById('group-msg-input').value.trim():document.getElementById('group-msg-input-no').value.trim();
     const phTime=new Date().toLocaleString('en-PH',{timeZone:'Asia/Manila'});
@@ -1017,7 +1058,7 @@
 
     try{
       if(APPS_SCRIPT_URL&&APPS_SCRIPT_URL!=='PASTE_YOUR_WEB_APP_URL_HERE'){
-        const params=new URLSearchParams({ name:leadName, attending:attending.length>0?'true':'false', guestCount:attending.length, guestNames:attendingNames, dietary, message:msg, timestamp:new Date().toISOString() });
+        const params=new URLSearchParams({ name:leadName, attending:attending.length>0?'true':'false', guestCount:attending.length, guestNames:attendingTypes, dietary, message:msg, timestamp:new Date().toISOString() });
         await fetch(`${APPS_SCRIPT_URL}?${params}`,{method:'GET',mode:'no-cors',redirect:'follow'});
       }
     }catch(err){ console.warn('Apps Script error:',err); }
@@ -1032,7 +1073,7 @@
       document.getElementById('ty-sub').textContent=`We're so thrilled you're joining us, ${firstName}!`;
       const declineNote=declining.length>0?`<br><strong>Regretfully Declining:</strong> ${declining.map(m=>m.resolvedName||m.name).join(', ')}`:'';
       document.getElementById('ty-detail').innerHTML=`
-        <strong>Attending:</strong> ${attendingNames||'None'} ✓<br>
+        <strong>Attending:</strong> ${attendingTypes||'None'} ✓<br>
         <strong>Party of:</strong> ${attending.length} ${attending.length===1?'guest':'guests'}${declineNote}
         ${dietary?`<br><strong>Dietary Notes:</strong> ${dietary}`:''}
         ${msg?`<br><strong>Message:</strong> "${msg}"`:''}
