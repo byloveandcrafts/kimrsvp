@@ -767,9 +767,9 @@
   // ─────────────────────────────────────────
   const GUEST_GROUPS = [
     // ── Mark Anthony's Side ──
-    { label:"Mark Anthony's Side", key:"Gubat Family", names:["Reynaldo Gubat","Rey Mark Gubat","Milke Francis Gubat","Ian Rey Gubat"], maxGuests:5 },
+    { label:"Mark Anthony's Side", key:"Gubat Family", names:["Reynaldo Gubat","Rey Mark Gubat","Guest of Rey Mark Gubat","Milke Francis Gubat","Ian Rey Gubat","Guest of Ian Rey Gubat"], maxGuests:6 },
     { label:"Mark Anthony's Side", key:"Fernandez Family", names:["Fe Fernandez","Oswaldo Fernandez","Samantha Fernandez"], maxGuests:3 },
-    { label:"Mark Anthony's Side", key:"Louie and Shirley Allindogan", names:["Louie Allindogan","Carlo Alindogan"], maxGuests:2 },
+    { label:"Mark Anthony's Side", key:"Louie and Shirley Allindogan", names:["Louie Allindogan","Shirley Allindogan","Carlo Alindogan","Guest of Carlo Alindogan"], maxGuests:4 },
     { label:"Mark Anthony's Side", key:"Batuigas Family", names:["Eva Batuigas","Ramon Batuigas","Kathleen Batuigas","Cathy Mombay","Estong Batuigas"], maxGuests:5 },
     { label:"Mark Anthony's Side", key:"Debil Family", names:["Josephine Debil","Dante Debil","Leslie Debil","Jenielyn Debil","Ping Debil"], maxGuests:5 },
     { label:"Mark Anthony's Side", key:"Che Che Israel", names:["Che Che Israel"], maxGuests:1 },
@@ -783,42 +783,42 @@
     { label:"Mark Anthony's Side", key:"Angie Gubat", names:["Angie Gubat"], maxGuests:1 },
     { label:"Mark Anthony's Side", key:"Ronald Gubat", names:["Ronald Gubat"], maxGuests:1 },
     { label:"Mark Anthony's Side", key:"Brian and Matet Delfino", names:["Brian Delfino","Matet Delfino"], maxGuests:2 },
-    { label:"Mark Anthony's Side", key:"Nina Valte-Lunaria", names:["Nina Valte-Lunaria"], maxGuests:1 },
+    { label:"Mark Anthony's Side", key:"Nina Valte-Lunaria", names:["Nina Valte-Lunaria","Guest of Nina Valte-Lunaria"], maxGuests:2 },
 
     // ── Kimberly's Side ──
     { label:"Kimberly's Side", key:"Guillermo & Eloisa Tagayuna", names:["Eloisa Tagayuna","Guillermo Tagayuna"], maxGuests:2 },
     { label:"Kimberly's Side", key:"Fernando Family", names:["Girlie Fernando","Alexander Fernando"], maxGuests:2 },
     { label:"Kimberly's Side", key:"Francisco Family", names:["Maria Cristina Tagayuna","Michael Francisco","Mateo Lucas Francisco"], maxGuests:3 },
-    { label:"Kimberly's Side", key:"Lardizabal Family", names:["Tetchie Tagayuna","Jun Lardizabal","Miko Lardizabal"], maxGuests:3 },
+    { label:"Kimberly's Side", key:"Lardizabal Family", names:["Tetchie Tagayuna","Jun Lardizabal","Guest of Jun Lardizabal","Miko Lardizabal"], maxGuests:4 },
     { label:"Kimberly's Side", key:"Tagayuna Family", names:["Robert Tagayuna","Reena Tagayuna","Rikka Tagayuna"], maxGuests:3 },
     { label:"Kimberly's Side", key:"Mamuad Family", names:["Aika Jeane Mamuad","Myka Alexandra Mamuad","Mareffie Jeyn Mamuad","Allysa Mamuad","Nikki Mamuad"], maxGuests:5 },
     { label:"Kimberly's Side", key:"Janet Garcia", names:["Janet Garcia"], maxGuests:1 },
     { label:"Kimberly's Side", key:"Imma Garcia", names:["Imma Garcia"], maxGuests:1 },
-    { label:"Kimberly's Side", key:"April Elpedes", names:["April Elpedes"], maxGuests:1 },
+    { label:"Kimberly's Side", key:"April Elpedes", names:["April Elpedes","Guest of April Elpedes"], maxGuests:2 },
     { label:"Kimberly's Side", key:"Dela Cruz Family", names:["Rose Dela Cruz","Ding Dela Cruz"], maxGuests:2 },
-    { label:"Kimberly's Side", key:"Joan Elpedes", names:["Joan Elpedes"], maxGuests:1 },
-    { label:"Kimberly's Side", key:"Margie Elpedes", names:["Margie Elpedes"], maxGuests:1 },
-    { label:"Kimberly's Side", key:"Robert & Tess Alindayu", names:["Robert Alindayu"], maxGuests:2 },
+    { label:"Kimberly's Side", key:"Joan Elpedes", names:["Joan Elpedes","Guest of Joan Elpedes"], maxGuests:2 },
+    { label:"Kimberly's Side", key:"Margie Elpedes", names:["Margie Elpedes","Guest of Margie Elpedes"], maxGuests:2 },
+    { label:"Kimberly's Side", key:"Robert & Tess Alindayu", names:["Robert Alindayu","Tess Alindayu"], maxGuests:2 },
 
     // ── Friends ──
     { label:"Friends", key:"Gabriel Family", names:["Abigail Gabriel","Chico Gabriel"], maxGuests:2 },
     { label:"Friends", key:"Danielle Louise Lozada", names:["Danielle Louise Lozada"], maxGuests:1 },
     { label:"Friends", key:"Ma Lourdes Viterbo", names:["Ma Lourdes Viterbo"], maxGuests:1 },
-    { label:"Friends", key:"Wills Nkwain Ngamfon", names:["WIlls Nkwain Ngamfon"], maxGuests:1 },
+    { label:"Friends", key:"Wills Nkwain Ngamfon", names:["Wills Nkwain Ngamfon"], maxGuests:1 },
     { label:"Friends", key:"John Idds Bellido", names:["John Idds Bellido"], maxGuests:1 },
-    { label:"Friends", key:"Benjo Eslobo", names:["Benjo Eslobo"], maxGuests:1 },
+    { label:"Friends", key:"Benjo Eslobo", names:["Benjo Eslobo","Guest of Benjo Eslobo"], maxGuests:2 },
     { label:"Friends", key:"Jolan Valenzuela", names:["Jolan Valenzuela"], maxGuests:1 },
     { label:"Friends", key:"Macydane Callao", names:["Macydane Callao"], maxGuests:1 },
     { label:"Friends", key:"Jerome & Winnie Espiritu", names:["Jerome Espiritu","Winnie Espiritu"], maxGuests:2 },
     { label:"Friends", key:"Lowie and Dhang De Guzman", names:["Lowie De Guzman","Imelda De Guzman"], maxGuests:2 },
-    { label:"Friends", key:"Athens & Jhoy Rint", names:["Anthenis Rint","Juliet Rint"], maxGuests:2 },
+    { label:"Friends", key:"Anthenis & Jhoy Rint", names:["Anthenis Rint","Juliet Rint"], maxGuests:2 },
     { label:"Friends", key:"Jonathan & Ailene Morales", names:["Jonathan Morales","Ailene Morales"], maxGuests:2 },
-    { label:"Friends", key:"Mark and Mau Delmiguez", names:["Mark Delminguez","Maureen Delminguez"], maxGuests:2 },
+    { label:"Friends", key:"Mark and Maureen Delminguez", names:["Mark Delminguez","Maureen Delminguez"], maxGuests:2 },
     { label:"Friends", key:"Jorge & Janice Bergonio", names:["Janice Bergonio","Jorge Bergonio"], maxGuests:2 },
     { label:"Friends", key:"Grace Malapajo", names:["Grace Malapajo"], maxGuests:1 },
     { label:"Friends", key:"Mark & Monica Santos", names:["Monica Santos","Mark Santos"], maxGuests:2 },
     { label:"Friends", key:"Jhigs & Cindy Torres", names:["Cindy Torres","Jhigs Torres"], maxGuests:2 },
-    { label:"Friends", key:"Junarc Deloro", names:["Junarc Deloro"], maxGuests:1 },
+    { label:"Friends", key:"Junarc Deloro", names:["Junarc Deloro","Guest of Junarc Deloro"], maxGuests:2 },
     { label:"Friends", key:"Ronalyn Guinto", names:["Ronalyn Guinto"], maxGuests:1 },
     { label:"Friends", key:"Luchie Ramos", names:["Luchie Ramos"], maxGuests:1 },
     { label:"Friends", key:"Larry Utitco", names:["Larry Utitco"], maxGuests:1 },
@@ -837,7 +837,7 @@
   ];
 
   function groupKey(g){ return g.key; }
-  function isPlaceholder(n){ return !n || n.trim() === '' || /^guest\s*\d*$/i.test(n.trim()); }
+  function isPlaceholder(n){ return !n || n.trim() === '' || /^guest\s*\d*$/i.test(n.trim()) || /^guest of\s/i.test(n.trim()); }
 
   // ── State ──
   let selectedGroup     = null;
@@ -882,7 +882,7 @@
       document.getElementById('search-loading').classList.remove('show');
       const hits = GUEST_GROUPS.filter(g =>
         g.key.toLowerCase().includes(q) ||
-        g.names.some(n=>n.toLowerCase().includes(q))
+        g.names.some(n=>!(/^guest of\s/i.test(n||'')) && n.toLowerCase().includes(q))
       );
       if(!hits.length){
         resultsList.innerHTML=`<li class="result-empty">No guests found for "<em>${q}</em>".<br>Please check the spelling.</li>`;
@@ -940,13 +940,15 @@
       const row=document.createElement('div');
       row.className='member-row'; row.id=`mrow-${idx}`;
       const needsName=isPlaceholder(member.name);
+      const isPlusOne=/^guest of\s/i.test(member.name||'');
       const displayName=member.resolvedName||member.name;
       const initials=(displayName||'?').split(/[\s,]+/).filter(Boolean).map(w=>w[0]).slice(0,2).join('').toUpperCase()||'?';
+      const placeholderLabel = isPlusOne ? `+1 guest of ${member.name.replace(/^guest of\s*/i,'')}…` : 'Enter guest name…';
       row.innerHTML=`
-        <div class="member-avatar" id="mavatar-${idx}">${needsName&&!member.resolvedName?'?':initials}</div>
+        <div class="member-avatar" id="mavatar-${idx}">${needsName&&!member.resolvedName?'+1':initials}</div>
         <div class="member-name-wrap">
           ${needsName
-            ? `<input class="member-name-input" id="mname-input-${idx}" type="text" placeholder="Enter guest name…" value="${member.resolvedName}" oninput="updateMemberName(${idx},this.value)">`
+            ? `<div style="font-size:10px;letter-spacing:1.5px;text-transform:uppercase;color:var(--gold);margin-bottom:3px;">${isPlusOne?'Plus One':''}</div><input class="member-name-input" id="mname-input-${idx}" type="text" placeholder="${placeholderLabel}" value="${member.resolvedName}" oninput="updateMemberName(${idx},this.value)">`
             : `<div class="member-name">${displayName}</div>`}
         </div>
         <div class="member-toggle">
